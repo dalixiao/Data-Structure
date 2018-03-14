@@ -1,4 +1,4 @@
-Dali Xiao
+
 TwoFiveTree.h is the class for TwoFiveTree
 
 AVLTree.h contains the class for AVLTree
