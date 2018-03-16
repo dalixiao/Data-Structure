@@ -1,0 +1,37 @@
+1. Sorting by counting
+Assumptions:    1. n input data (interger)
+                2. they range from [1, k]
+Example
+    A =  [3,6,4,1,3,4,1,4]     k=6
+    C =  [2,0,2,3,0,1]     counter array . count apperance
+          1 2 3 4 5 6      
+    C =  [2,2,4,7,7,8]     modify counter array, counter the number less than or equal to
+          1 2 3 4 5 6
+    B =  [1 1 3 3 4 4 4 6]  Going from the last element in A to A[0]    Find the position in C, put the elment at B[position]
+          1 2 3 4 5 6 7 8 . and decrement the C[element]
+          
+    Pseudo Code
+          for i = 1:k                       O(k)
+             c[i] = 0;
+          for j = 1:n                       O(n)
+             c[A[j]] = C[A[j]]+1
+          for i = 2:k                       O(k)
+             c[i] = c[i] + c[i-1]           
+          for j = n:1                       O(n)
+             B[c[A[j]]] = A[j]
+             C[A[j]] = C[A[j]]-1
+             
+    Total complexity .   O(n+k) .         n<<k .  Don't use it
+
+2. Radix Sort
+	Sort [70,45,75,90,2,802,2,66]
+	Sort based on least significant bit.    Use counting algorithm to sort them .       Then go to next significant bit
+	70 
+	90
+	2
+	802
+	2
+	45
+	75
+	66               Complexity #significant bit * O(n+10)    = O(nw)     
+	
