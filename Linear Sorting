@@ -35,3 +35,12 @@ Example
 	75
 	66               Complexity #significant bit * O(n+10)    = O(nw)     
 	
+3. Bucket Sort
+	Assumption: Input Data has uniform distribution
+	n input value
+	n buckets
+	12,7,1,14,18,4      n = 6 range [1,18] 
+	  1      4        7      12    14     18
+ 	[ . ] . [ . ] . [ . ]  [ . ]  [ . ]  [ . ]
+	 1-3    4-6 .    7-9   10-12  13-15  16-18
+	 Then we sort the bucket
